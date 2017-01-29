@@ -1,0 +1,72 @@
+.bar {
+  fill: steelblue;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.axis--x path {
+  display: none;
+}
+
+.axis-label {
+  font-family: helvetica, sans-serif;
+  font-size: 11.5px;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+/*------------------------------------------*/
+/* Specific CSS for the scatterplot styling */
+body {
+  font: 11px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.legenddot {
+  stroke: #000;
+  fill: none;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.country-label {
+	fill: black;
+	font-size: 8px;
+}
+
+.selected-country {
+	font-size: 18px;
+}
+
+
+
+.state-label {
+  fill: black;
+  font-size: 8px;
+}
+
+.selected-state {
+  font-size: 18px;
+}
