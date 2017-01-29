@@ -19,7 +19,7 @@ function totalfirearms() {
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   // Load the data
-  d3.csv("firearmsbycountry.csv", function(d) {
+  d3.csv("data/firearmsbycountry.csv", function(d) {
     d.country   = d.country;
     d.percapita = +d.percapita;
     d.region    = d.region;

@@ -56,7 +56,7 @@ function scatterplotcountry() {
 		.style("opacity", 0);
 
 	// load data
-	d3.csv("CompiledFirearmData20161113.csv", function(error, data) {
+	d3.csv("data/CompiledFirearmData20161113.csv", function(error, data) {
 		// change string (from CSV) into number format
 		data.forEach(function(d) {
 			d.gunsper100 = +d.gunsper100;

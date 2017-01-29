@@ -56,7 +56,7 @@ function scatterplotstates() {
 		.style("opacity", 0);
 
 	// load data
-	d3.csv("scatterplotstate.csv", function(error, data) {
+	d3.csv("data/scatterplotstate.csv", function(error, data) {
 		// change string (from CSV) into number format
 		data.forEach(function(d) {
 			d.gunownership = +d.gunownership;

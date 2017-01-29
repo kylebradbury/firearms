@@ -24,7 +24,7 @@ function gunownership() {
   var stack = d3.stack()
       .offset(d3.stackOffsetExpand);
 
-  d3.csv("gunsintheworld_short.csv", type, function(error, data) {
+  d3.csv("data/gunsintheworld_short.csv", type, function(error, data) {
     if (error) throw error;
 
     // data.sort(function(a, b) { return b[data.columns[1]] / b.total - a[data.columns[1]] / a.total; });
