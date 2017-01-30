@@ -3,8 +3,8 @@ gunownership();
 function gunownership() {
   var svg = d3.select("#gunsintheworld")
               .append("svg")
-              .attr('width', 700)
-              .attr('height', 700);
+              .attr('width', 400)
+              .attr('height', 300);
   var margin = {top: 20, right: 60, bottom: 30, left: 40},
       width = +svg.attr("width") - margin.left - margin.right,
       height = +svg.attr("height") - margin.top - margin.bottom,

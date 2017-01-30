@@ -5,8 +5,8 @@ function totalfirearms() {
   var svg = d3.select("#worldpercapita")
               .append("svg")
               .attr("width",700)
-              .attr('height', 400) ;
-  var margin = {top: 20, right: 20, bottom: 150, left: 40},
+              .attr('height', 300) ;
+  var margin = {top: 20, right: 20, bottom: 80, left: 40},
       width = +svg.attr("width") - margin.left - margin.right,
       height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -46,14 +46,14 @@ function totalfirearms() {
     // Add y-axis
     g.append("g")
         .attr("class", "axis axis--y")
-        .call(d3.axisLeft(y).ticks(10))
-        .attr("transform", "translate(" + height/10 + ",0)") ;
+        .call(d3.axisLeft(y).ticks(10));
+        //.attr("transform", "translate(" + height/10 + ",0)") ;
 
     // now add titles to the axes
     g.append("text")
         .attr("class", "axis-label")
         .attr("text-anchor", "middle")
-        .attr("transform", "translate("+ (margin.left/2 - width/20) +","+(height/2)+")rotate(-90)")
+        .attr("transform", "translate("+ (margin.left/2 - width/13) +","+(height/2)+")rotate(-90)")
         .text("Civilian guns per 100 people");
 
     // Add bars to plots

@@ -67,8 +67,6 @@ function scatterplotstates() {
 		var rMin = d3.min(data, population),
 			rMax = d3.max(data, population);
 
-		// xScale.domain([xMin, xMax]);
-		// yScale.domain([yMin, yMax]);
 		pointSize.domain([rMin, rMax]);
 		var pointMap = function(d) { return Math.sqrt(pointSize(d)/Math.PI) } ;
 
@@ -161,7 +159,6 @@ function scatterplotstates() {
 			.attr("class", "legend")
 			.attr("transform", function(d, i) { return "translate("
 				+ 0 + "," + (height -i * 20 - margin.bottom) + ")"; });
-			// .attr("transform", function(d, i) { return "translate(0," + (i * 20 + margin.top) + ")"; });
 
 		// draw legend colored rectangles
 		legend.append("rect")

@@ -64,17 +64,9 @@ function scatterplotcountry() {
 		});
 
 		// don't want dots overlapping axis, so add in buffer to data domain
-		// var xMin = d3.min(data, xValue),
-		// 	xMax = d3.max(data, xValue),
-		// 	yMin = d3.min(data, yValue),
-		// 	yMax = d3.max(data, yValue),
-		// 	rMin = d3.min(data, gdpPerCapita),
-		// 	rMax = d3.max(data, gdpPerCapita);
 		var rMin = d3.min(data, gdpPerCapita),
 			rMax = d3.max(data, gdpPerCapita);
 
-		// xScale.domain([xMin, xMax]);
-		// yScale.domain([yMin, yMax]);
 		pointSize.domain([rMin, rMax]);
 		var pointMap = function(d) { return Math.sqrt(pointSize(d)/Math.PI) } ;
 
@@ -114,14 +106,7 @@ function scatterplotcountry() {
 		
 		points.append("circle")
 			.attr("class", "dot")
-			.attr("r", function(d,i) {
-				var xx = +Math.sqrt(pointSize(gdpPerCapita(d))/Math.PI);
-				if (isNaN(xx) === true) {
-					console.log(i) ;
-					console.log(d) ;
-				}
-				return xx ;
-			})
+			.attr("r", function(d,i) {return +Math.sqrt(pointSize(gdpPerCapita(d))/Math.PI);})
 			.attr("cx", xMap)
 			.attr("cy", yMap)
 			.style("fill", function(d) { return color(cValue(d));})
@@ -171,7 +156,6 @@ function scatterplotcountry() {
 			.attr("class", "legend")
 			.attr("transform", function(d, i) { return "translate("
 				+ 0 + "," + (height -i * 20 - margin.bottom) + ")"; });
-			// .attr("transform", function(d, i) { return "translate(0," + (i * 20 + margin.top) + ")"; });
 
 		// draw legend colored rectangles
 		legend.append("rect")
@@ -189,8 +173,6 @@ function scatterplotcountry() {
 			.text(function(d) { return d;});
 
 		// DRAW CIRCLE SIZE LEGEND
-		// legData = [rMin, 0.5*(rMin + rMax), rMax] ;
-		// legData = [50000, 20000, 100] ;
 		legData = [100, 20000, 50000] ;
 		startLocation = height*0.4 ;
 
@@ -232,7 +214,7 @@ function scatterplotcountry() {
 			.attr('font-size','8px')
 			.attr("dy", ".35em")
 			.style("text-anchor", "middle")
-			.text(function(d,i){console.log(d); return d/1e3;});
+			.text(function(d){return d/1e3;});
 
 		// Add the title of the circle size
 		legendDs.append('text')

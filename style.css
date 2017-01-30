@@ -70,3 +70,11 @@ body {
 .selected-state {
   font-size: 18px;
 }
+
+.centerfig {
+  text-align: center;
+}
+
+.caption {
+  font-weight: bold;
+}
