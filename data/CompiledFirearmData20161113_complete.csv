@@ -1,5 +1,5 @@
 country,population,gdppercapita,gunsper100,gunstotal,homicidetotal,homicidesper100,region
-United States,309876170,37329.61591,101.05,270000000,10945,3.43,North America
+United States,309876170,37329.61591,88.8,270000000,10945,3.43,North America
 Switzerland,7830534,38826.84298,45.7,3400000,57,0.77,Europe
 Finland,5367693,26953.22055,45.3,2400000,24,0.45,Europe
 Serbia,9059046,1194.639994,37.8,3050000,45,0.46,Europe
